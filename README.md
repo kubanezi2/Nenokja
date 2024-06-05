@@ -4,8 +4,7 @@
   [![Platform](https://img.shields.io/badge/Platform-Windows%2C%20Mac%2C%20Linux-blue)](#)
   [![Python_version](https://img.shields.io/badge/Python%20version-3.8-blueviolet)](#)
 
-<img src="https://user-images.githubusercontent.com/76649588/208201214-add50e06-c0da-4e2d-ba87-d33c797d035b.png">
-</div>
+
 
 # Index
 
