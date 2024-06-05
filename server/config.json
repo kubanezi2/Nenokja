@@ -2,7 +2,7 @@
     "ip": "127.0.0.1",
     "port": 8889,
     "buffer": 1024,
-    "welcome_message": "[red]Mireseerdhet tek <chat name>[/red]",
+    "welcome_message": "[red]Mireseerdhet tek Nenokja[/red]",
     "protected_by_password": True,
     "password": "pass"
 
