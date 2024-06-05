@@ -151,7 +151,7 @@ class Chat:
 
     def joined(self, nickname: str):
         self.send_to_clients(self.rsa_api.encrypt(
-            f"[green]{nickname}[/green] has joined."))
+            f"[green]{nickname}[/green] eshte bashkuar."))
 
     def welcome_message(self, welcome_message: bytes):
         self.client.send(welcome_message)
@@ -165,7 +165,7 @@ class Chat:
                     self.remove_client(client)
 
     def remove_client(self, client):
-        print("[[yellow]?[/yellow]] Client disconnected")
+        print("[[yellow]?[/yellow]] Perdoruesi eshte larguar")
 
         index = clients.index(client)
         # Remove from list
@@ -174,7 +174,7 @@ class Chat:
         nickname = nicknames[index]
 
         self.send_to_clients(self.rsa_api.encrypt(
-            f"[green]{nickname}[/green] has left."))
+            f"[green]{nickname}[/green] ka lene biseden."))
 
         # Remove nickname
         nicknames.remove(nickname)
@@ -227,7 +227,7 @@ class Chat:
             if not username_exist:
                 # Send message: "accepted" to client
                 self.client.send("/accepted".encode())
-                print("[[yellow]?[/yellow]] Client connected")
+                print("[[yellow]?[/yellow]] Perdoruesi eshte lidhur")
 
                 nicknames.append(nickname)
                 clients.append(self.client)
@@ -272,11 +272,11 @@ class Main:
     def run():
         username_exist = False
 
-        print(f"[[magenta]*[/magenta]] Buffer: {buffer}")
+        print(f"[[magenta]*[/magenta]] Mbrojtja: {buffer}")
 
-        print("[[cyan]+[/cyan]] RSA key generation...")
+        print("[[cyan]+[/cyan]] Celesi RSA po krijohet...")
         public_key, private_key = API.create_keys(buffer)
-        print("[[cyan]+[/cyan]] RSA key generated")
+        print("[[cyan]+[/cyan]] Celesi RSA eshte krijuar me sukses!")
 
         while True:
             client, addr = server.accept()
