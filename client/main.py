@@ -163,7 +163,7 @@ class UI:
         return username, username_styled
 
     def get_password(self):
-        password = console.input("[b]Insert password[/b] :locked_with_key: : ")
+        password = console.input("[b]Vendosni Fjalkalimin[/b] :locked_with_key: : ")
         # Encrypt password
         return hashlib.md5(password.encode()).hexdigest()
 
