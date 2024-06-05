@@ -128,12 +128,13 @@ class UI:
 
     def banner(self):
         print(Align(r"""[purple]
-  _____  _____ ______ _____
- / ____|/ ____|  ____/ ____|
- | |    | (___ | |__ | |
- | |     \___ \|  __|| |
- | |____ ____) | |___| |____
- \_____|_____/|______\_____|
+
+  _   _ ______ _   _  ____  _  __    _         
+ | \ | |  ____| \ | |/ __ \| |/ /   | |  /\    
+ |  \| | |__  |  \| | |  | | ' /    | | /  \   
+ | . ` |  __| | . ` | |  | |  < _   | |/ /\ \  
+ | |\  | |____| |\  | |__| | . \ |__| / ____ \ 
+ |_| \_|______|_| \_|\____/|_|\_\____/_/    \__
 """, "center"))
 
     def get_server(self):
@@ -182,7 +183,7 @@ class Chat:
         making all the username available
     }
 
-    var (str) username: Current username
+    var (str) username: Emri i Perdoruesit
 
     fun receive: Receive messages via socket
     fun write: Where the user will put the message, it will be encrypted
@@ -229,8 +230,8 @@ class Chat:
                             elif msg_splited[0] == "/upload":
                                 try:
                                     upload = anon.upload(msg_splited[1], progressbar=False)
-                                    print("<[green][i]You[/i][/green]>" + " [b]Upload: [/b] " + str(upload.url.geturl()))
-                                    self.chat_api.send(self.username_styled + " [b]Upload:[/b] " + str(upload.url.geturl()))
+                                    print("<[green][i]You[/i][/green]>" + " [b]Ngarko: [/b] " + str(upload.url.geturl()))
+                                    self.chat_api.send(self.username_styled + " [b]Ngarko:[/b] " + str(upload.url.geturl()))
                                 except IndexError:
                                     print("Usage: /upload <path>")
                                 except FileNotFoundError:
@@ -285,7 +286,7 @@ class Main:
                 s.connect((self.ip, self.port))
             except ConnectionRefusedError:
                 cls()
-                print("[red]ERROR[/red]: Connection refused")
+                print("[red]ERROR[/red]: Lidhja nuk funksionoi")
                 self.ip, self.port = ui.get_server()
                 self.username, self.username_styled, = ui.get_username()
                 is_protected = s.recv(1024).decode()
@@ -332,7 +333,7 @@ class Main:
         confirm = s.recv(1024).decode()
 
         if confirm != "/accepted":
-            print("[red]ERROR[/red]: Username exist")
+            print("[red]ERROR[/red]: Emri i perdoruesit ekziston")
             s.close()
             quit()
 
@@ -341,7 +342,7 @@ class Main:
         confirm = s.recv(1024).decode()
         # Confirm: /exit or /accepted
         if confirm != "/accepted":
-            print("[red]ERROR[/red]: Incorrect password")
+            print("[red]ERROR[/red]: Fjalkalimi i pa sakte")
             s.close()
             quit()
 
