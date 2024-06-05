@@ -140,10 +140,10 @@ class UI:
     def get_server(self):
 
         server_ip = console.input(
-            "[b]Insert server address[/b] :laptop_computer: : ")
+            "[b]Vendos adresen e serverit[/b] :laptop_computer: : ")
 
         server_port = int(
-            console.input("[b]Insert server port[/b] : "))
+            console.input("[b]Vendos porten e serverit[/b] : "))
 
         # If server_ip == "local"... change server_ip to 127.0.0.1
 
@@ -155,7 +155,7 @@ class UI:
 
     def get_username(self):
         username = console.input(
-            "[b]Insert your username[/b] :ID: : ")
+            "[b]Vendosni emrin e perdoruesit[/b] :ID: : ")
 
         # Random color set
         color = self.random_color()
