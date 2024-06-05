@@ -3,7 +3,7 @@
     "port": 8889,
     "buffer": 1024,
     "welcome_message": "[red]Mireseerdhet tek <chat name>[/red]",
-    "protected_by_password": false,
-    "password": "test"
+    "protected_by_password": True,
+    "password": "pass"
 
 }
