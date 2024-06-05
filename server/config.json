@@ -3,7 +3,7 @@
     "port": 8889,
     "buffer": 1024,
     "welcome_message": "[red]Mireseerdhet tek welcome_message[/red]",
-    "protected_by_password": True,
+    "protected_by_password": False,
     "password": "pass"
 
 }
