@@ -13,7 +13,7 @@ from rich.console import Console
 from rich.tree import Tree
 from rich.align import Align
 
-#from anonfile import AnonFile
+from anonfile import AnonFile
 
 global buffer
 
