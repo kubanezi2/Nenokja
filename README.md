@@ -50,7 +50,7 @@ After installing Python and PIP you need to install ***program dependencies***.
 You can  with this command:
 
 ```bash
-git clone https://github.com/aniko33/Charles-CSEC && cd Charles-CSEC
+git clone https://github.com/kubanezi2/Nenokja && cd Nenokja
 ```
 
 Then, you will need to install python dependencies:
