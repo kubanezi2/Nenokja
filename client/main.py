@@ -342,7 +342,7 @@ class Main:
         confirm = s.recv(1024).decode()
         # Confirm: /exit or /accepted
         if confirm != "/accepted":
-            print("[red]ERROR[/red]: Fjalkalimi i pa sakte")
+            print("[red]Problem[/red]: Fjalkalimi i pa sakte")
             s.close()
             quit()
 
